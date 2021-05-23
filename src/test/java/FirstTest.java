@@ -19,12 +19,12 @@ public class FirstTest {
         open("https://demoqa.com/automation-practice-form");
 
         //Data entry
-        $("[#firstName]").setValue("Roman");
-        $("[#lastName]").setValue("Kudinov");
-        $("[#userEmail]").setValue("auto@auto.ru");
+        $("#firstName").setValue("Roman");
+        $("#lastName").setValue("Kudinov");
+        $("#userEmail").setValue("auto@auto.ru");
         $("[for=gender-radio-1]").click();
-        $("[#userNumber]").setValue("9169999999");
-        $("[#dateOfBirthInput]").click();
+        $("#userNumber").setValue("9169999999");
+        $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("April");
         $(".react-datepicker__year-select").selectOption("1990");
         $("[aria-label='Choose Monday, April 30th, 1990']").click();
@@ -35,8 +35,7 @@ public class FirstTest {
         // Result
 
         $(".table-responsive").shouldHave(text("Roman Kudinov"), text("auto@auto.ru"),
-                text("Male"), text("9169999999"), text("30 April,1990"), text("Computer Science"),
-                text("Sports, Reading"), text("testJPEG.jpeg"), text("Russia, Kazan."),
+                text("Male"), text("9169999999"), text("30 April,1990"),
                 text("Uttar Pradesh Merrut"));
     }
 }

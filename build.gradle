@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
 group 'org.example'
@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'junit:junit:4.13.1'
     testImplementation("com.codeborne:selenide:5.20.3",
             "org.junit.jupiter:junit-jupiter-api:5.7.1",
             "org.slf4j:slf4j-api:1.7.30",
