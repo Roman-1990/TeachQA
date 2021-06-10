@@ -38,6 +38,14 @@ public class FirstTest {
                 text("Male"), text("9169999999"), text("30 April,1990"),
                 text("Uttar Pradesh Merrut"));
     }
+
+   void test() {
+
+   }
+
+    public static void main(String[] args) {
+        System.out.println("Код в чужом проекте!");
+    }
 }
 
 
