@@ -12,11 +12,12 @@ public class FirstTest {
     @BeforeAll
     static void setStartConfig() {
         Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://demoqa.com";
     }
 
     @Test
     void TeachingSubmitTest() {
-        open("https://demoqa.com/automation-practice-form");
+        open(Configuration.baseUrl + "/automation-practice-form");
 
         //Data entry
         $("#firstName").setValue("Roman");
@@ -33,7 +34,6 @@ public class FirstTest {
         $("#submit").click();
 
         // Result
-
         $(".table-responsive").shouldHave(text("Roman Kudinov"), text("auto@auto.ru"),
                 text("Male"), text("9169999999"), text("30 April,1990"),
                 text("Uttar Pradesh Merrut"));
