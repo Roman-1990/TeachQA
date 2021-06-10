@@ -39,6 +39,10 @@ public class FirstTest {
                 text("Uttar Pradesh Merrut"));
     }
 
+   void test() {
+
+   }
+
     public static void main(String[] args) {
         System.out.println("Код в чужом проекте!");
     }
